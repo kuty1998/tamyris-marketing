@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tamyris Marketing Digital — Estratégia, posicionamento e crescimento</title>
+  <meta name="description" content="Tamyris Marketing Digital: estratégia, posicionamento de marca, redes sociais e conteúdo para transformar a presença digital do seu negócio em resultado.">
+  <meta name="theme-color" content="#6D28FF">
+  <meta property="og:title" content="Tamyris Marketing Digital">
+  <meta property="og:description" content="Transformo presença digital em resultado. Estratégia, posicionamento e crescimento para a sua marca.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%236D28FF'/%3E%3Ctext x='32' y='44' font-size='36' font-weight='800' text-anchor='middle' fill='white' font-family='Arial'%3ET%3C/text%3E%3Ccircle cx='50' cy='14' r='7' fill='%23FF4D9D'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --tinta:#1B1035;
+      --violeta:#6D28FF;
+      --rosa:#FF4D9D;
+      --sol:#FFD84D;
+      --lilas:#EDE7FF;
+      --papel:#FBF9FF;
+      --branco:#FFFFFF;
+      --display:'Bricolage Grotesque','Trebuchet MS','Segoe UI',sans-serif;
+      --texto:'DM Sans','Segoe UI',system-ui,sans-serif;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{font-family:var(--texto);color:var(--tinta);background:var(--papel);line-height:1.6;font-size:1.05rem;overflow-x:hidden}
+    a{color:inherit}
+    img,svg{max-width:100%}
+    :focus-visible{outline:3px solid var(--violeta);outline-offset:3px}
+
+    /* ---------- BOTÕES ---------- */
+    .btn{display:inline-flex;align-items:center;gap:.6rem;padding:.95rem 1.7rem;border:2px solid var(--tinta);border-radius:999px;font-family:var(--texto);font-weight:700;font-size:1.05rem;text-decoration:none;box-shadow:4px 4px 0 var(--tinta);transition:transform .15s ease,box-shadow .15s ease;cursor:pointer}
+    .btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--tinta)}
+    .btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--tinta)}
+    .btn-violeta{background:var(--violeta);color:var(--branco)}
+    .btn-sol{background:var(--sol);color:var(--tinta)}
+    .btn-branco{background:var(--branco);color:var(--tinta)}
+    .btn-pequeno{padding:.6rem 1.2rem;font-size:.95rem;box-shadow:3px 3px 0 var(--tinta)}
+
+    /* ---------- NAVEGAÇÃO ---------- */
+    .nav{position:sticky;top:0;z-index:50;background:rgba(251,249,255,.88);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:2px solid var(--tinta)}
+    .nav-in{max-width:1180px;margin:0 auto;padding:.8rem 1.4rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .marca{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+    .marca-logo{position:relative;width:46px;height:46px;border-radius:50%;background:var(--violeta);color:var(--branco);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:1.5rem;border:2px solid var(--tinta)}
+    .marca-logo::after{content:"";position:absolute;top:-4px;right:-4px;width:14px;height:14px;background:var(--rosa);border:2px solid var(--tinta);border-radius:50%}
+    .marca-nome{font-family:var(--display);font-weight:800;font-size:1.25rem;line-height:1.1}
+    .marca-nome small{display:block;font-family:var(--texto);font-weight:500;font-size:.78rem;opacity:.75;letter-spacing:.01em}
+    .nav-links{display:flex;align-items:center;gap:1.8rem}
+    .nav-links a{text-decoration:none;font-weight:500}
+    .nav-links a:not(.btn):hover{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:6px;text-decoration-color:var(--rosa)}
+
+    /* ---------- HERO ---------- */
+    .hero{position:relative;background:var(--lilas);border-bottom:2px solid var(--tinta);overflow:hidden}
+    .hero::before,.hero::after{content:"";position:absolute;border-radius:50%;z-index:0}
+    .hero::before{width:420px;height:420px;background:var(--rosa);opacity:.22;top:-140px;right:-100px}
+    .hero::after{width:300px;height:300px;background:var(--sol);opacity:.35;bottom:-120px;left:-80px}
+    .hero-in{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:4.5rem 1.4rem 5rem;display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center}
+    .hero h1{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,6.4vw,5rem);line-height:1.02;letter-spacing:-.02em;margin-bottom:1.4rem}
+    .hero h1 .marca-frase{display:inline-block;margin-top:.35rem;padding:.02em .3em .08em;background:var(--rosa);border:2px solid var(--tinta);border-radius:.25em;transform:rotate(-1.5deg);box-shadow:4px 4px 0 var(--tinta)}
+    .hero-sub{font-size:clamp(1.1rem,2.2vw,1.35rem);max-width:34rem;margin-bottom:.6rem}
+    .hero-assinatura{font-weight:700;margin-bottom:2rem;font-size:1.05rem}
+    .hero-acoes{display:flex;flex-wrap:wrap;gap:1rem}
+
+    /* mockup de celular */
+    .palco{position:relative;display:grid;place-items:center;min-height:520px}
+    .celular{width:270px;background:var(--branco);border:3px solid var(--tinta);border-radius:38px;padding:14px 14px 18px;box-shadow:10px 10px 0 var(--tinta);transform:rotate(3deg)}
+    .celular-topo{width:80px;height:8px;border-radius:8px;background:var(--tinta);margin:0 auto 14px;opacity:.85}
+    .perfil{display:flex;align-items:center;gap:.7rem;margin-bottom:.9rem}
+    .perfil-foto{flex:0 0 auto;width:54px;height:54px;border-radius:50%;background:var(--violeta);color:var(--branco);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:1.6rem;border:3px solid var(--rosa)}
+    .perfil-nome{font-weight:700;font-size:.85rem;line-height:1.25;word-break:break-all}
+    .perfil-nome span{display:block;font-weight:400;font-size:.75rem;opacity:.7}
+    .grade{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+    .tile{aspect-ratio:1;border-radius:10px;display:grid;place-items:center;text-align:center;font-family:var(--display);font-weight:800;font-size:.72rem;line-height:1.1;padding:4px;border:2px solid var(--tinta)}
+    .t1{background:var(--violeta);color:var(--branco);font-size:1.6rem}
+    .t2{background:var(--sol)}
+    .t3{background:var(--rosa)}
+    .t4{background:var(--lilas)}
+    .t5{background:var(--tinta);color:var(--sol);font-size:1.6rem}
+    .t6{background:var(--branco)}
+    .t7{background:var(--rosa);font-size:1.6rem}
+    .t8{background:var(--violeta);color:var(--branco)}
+    .t9{background:var(--sol);font-size:1.6rem}
+
+    .adesivo{position:absolute;padding:.5rem .95rem;border:2px solid var(--tinta);border-radius:14px;font-weight:700;font-size:.95rem;box-shadow:3px 3px 0 var(--tinta);white-space:nowrap}
+    .a1{background:var(--sol);top:9%;left:0;--giro:-7deg}
+    .a2{background:var(--rosa);top:42%;right:-6px;--giro:6deg}
+    .a3{background:var(--branco);bottom:8%;left:2%;--giro:-4deg}
+
+    /* uma única entrada orquestrada no carregamento */
+    @keyframes surgir{from{opacity:0;transform:translateY(24px) rotate(var(--giro,0deg)) scale(.96)}to{opacity:1;transform:translateY(0) rotate(var(--giro,0deg)) scale(1)}}
+    .hero h1,.hero-sub,.hero-assinatura,.hero-acoes{animation:surgir .7s cubic-bezier(.2,.8,.2,1) both}
+    .hero-sub{animation-delay:.12s}
+    .hero-assinatura{animation-delay:.2s}
+    .hero-acoes{animation-delay:.28s}
+    .celular{animation:surgir .8s .2s cubic-bezier(.2,.8,.2,1) both;--giro:3deg}
+    .a1{animation:surgir .6s .55s cubic-bezier(.2,.8,.2,1) both}
+    .a2{animation:surgir .6s .7s cubic-bezier(.2,.8,.2,1) both}
+    .a3{animation:surgir .6s .85s cubic-bezier(.2,.8,.2,1) both}
+
+    /* ---------- FAIXA ---------- */
+    .faixa{background:var(--sol);border-bottom:2px solid var(--tinta);overflow:hidden;white-space:nowrap}
+    .faixa-trilho{display:inline-flex;gap:2.2rem;padding:.9rem 0;animation:rolar 32s linear infinite}
+    .faixa span{font-family:var(--display);font-weight:800;font-size:1.25rem;display:inline-flex;align-items:center;gap:2.2rem}
+    .faixa span::after{content:"";width:12px;height:12px;background:var(--tinta);border-radius:50%;display:inline-block}
+    @keyframes rolar{to{transform:translateX(-50%)}}
+
+    /* ---------- SEÇÕES ---------- */
+    .secao{max-width:1180px;margin:0 auto;padding:5.5rem 1.4rem}
+    .secao-titulo{font-family:var(--display);font-weight:800;font-size:clamp(2rem,4.6vw,3.3rem);line-height:1.08;letter-spacing:-.015em;margin-bottom:.8rem}
+    .secao-intro{max-width:36rem;margin-bottom:2.8rem;opacity:.85}
+
+    /* sobre */
+    .sobre{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+    .sobre-texto p{max-width:34rem;margin-bottom:1rem}
+    .sobre-cartao{background:var(--violeta);color:var(--branco);border:2px solid var(--tinta);border-radius:32px;padding:2.4rem;box-shadow:8px 8px 0 var(--tinta);transform:rotate(-1.5deg)}
+    .sobre-cartao p{font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.2}
+    .sobre-cartao small{display:block;margin-top:1.2rem;font-size:1rem;color:var(--sol);font-weight:700}
+
+    /* serviços em bento */
+    .servicos-fundo{background:var(--lilas);border-top:2px solid var(--tinta);border-bottom:2px solid var(--tinta)}
+    .bento{display:grid;grid-template-columns:repeat(12,1fr);gap:1.2rem}
+    .bloco{border:2px solid var(--tinta);padding:1.9rem;display:flex;flex-direction:column;gap:.6rem;transition:transform .2s ease}
+    .bloco:hover{transform:translateY(-4px)}
+    .bloco .icone{font-size:2rem;line-height:1}
+    .bloco h3{font-family:var(--display);font-weight:800;font-size:1.5rem;line-height:1.15}
+    .bloco p{max-width:30rem}
+    .b1{grid-column:span 7;background:var(--violeta);color:var(--branco);border-radius:32px 32px 32px 8px}
+    .b2{grid-column:span 5;background:var(--rosa);border-radius:32px 32px 8px 32px}
+    .b3{grid-column:span 4;background:var(--sol);border-radius:32px 8px 32px 32px}
+    .b4{grid-column:span 4;background:var(--branco);border-radius:24px}
+    .b5{grid-column:span 4;background:var(--tinta);color:var(--branco);border-radius:32px 32px 8px 32px}
+    .b6{grid-column:span 12;background:var(--branco);border-radius:32px;flex-direction:row;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
+    .b6 .b6-texto{display:flex;align-items:center;gap:1.2rem;flex:1 1 320px}
+    .b6 h3{margin-bottom:.15rem}
+
+    /* como funciona */
+    .passos{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;counter-reset:passo}
+    .passo{position:relative;background:var(--branco);border:2px solid var(--tinta);border-radius:24px;padding:2.6rem 1.5rem 1.6rem;counter-increment:passo}
+    .passo::before{content:counter(passo);position:absolute;top:-22px;left:1.3rem;width:44px;height:44px;border-radius:50%;background:var(--rosa);border:2px solid var(--tinta);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:1.3rem}
+    .passo:nth-child(2)::before{background:var(--sol)}
+    .passo:nth-child(3)::before{background:var(--violeta);color:var(--branco)}
+    .passo:nth-child(4)::before{background:var(--lilas)}
+    .passo h3{font-family:var(--display);font-weight:800;font-size:1.3rem;margin-bottom:.4rem}
+    .passo p{font-size:.98rem}
+
+    /* contato */
+    .contato-fundo{background:var(--violeta);color:var(--branco);border-top:2px solid var(--tinta);position:relative;overflow:hidden}
+    .contato-fundo::before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;background:var(--rosa);opacity:.35;right:-90px;top:-110px}
+    .contato{position:relative;text-align:center;padding:6rem 1.4rem}
+    .contato h2{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,5.4vw,4rem);line-height:1.05;letter-spacing:-.02em;max-width:46rem;margin:0 auto 1.2rem}
+    .contato p.lead{max-width:34rem;margin:0 auto 2.2rem;font-size:1.15rem}
+    .contato-acoes{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-bottom:2rem}
+    .contato-dados{font-weight:500}
+    .contato-dados a{color:var(--sol);font-weight:700}
+
+    /* rodapé */
+    footer{background:var(--tinta);color:var(--branco);padding:2.2rem 1.4rem 6rem;text-align:center;font-size:.95rem}
+    footer p+p{margin-top:.4rem;opacity:.75}
+
+    /* botão flutuante do WhatsApp */
+    .flutuante{position:fixed;right:18px;bottom:18px;z-index:60}
+
+    /* ---------- RESPONSIVO ---------- */
+    @media (max-width:900px){
+      .hero-in{grid-template-columns:1fr;padding-top:3rem}
+      .palco{min-height:500px}
+      .sobre{grid-template-columns:1fr}
+      .b1,.b2,.b3,.b4,.b5{grid-column:span 12}
+      .passos{grid-template-columns:1fr 1fr;row-gap:2rem}
+      .nav-links a:not(.btn){display:none}
+    }
+    @media (max-width:560px){
+      .secao{padding:4rem 1.2rem}
+      .passos{grid-template-columns:1fr}
+      .marca-nome small{display:none}
+      .hero-acoes .btn{width:100%;justify-content:center}
+      .adesivo{font-size:.85rem}
+      .a2{right:0}
+    }
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{animation:none !important;transition:none !important}
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" aria-label="Principal">
+    <div class="nav-in">
+      <a href="#topo" class="marca" aria-label="Tamyris Marketing Digital, início">
+        <span class="marca-logo" aria-hidden="true">T</span>
+        <span class="marca-nome">Tamyris<small>Marketing Digital</small></span>
+      </a>
+      <div class="nav-links">
+        <a href="#servicos">Serviços</a>
+        <a href="#como">Como funciona</a>
+        <a href="#contato">Contato</a>
+        <a href="https://wa.me/5519989585145" target="_blank" rel="noopener" class="btn btn-violeta btn-pequeno">WhatsApp</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="topo">
+    <div class="hero-in">
+      <div>
+        <h1>Quem não é visto, não é lembrado.<br><span class="marca-frase">E não vende.</span></h1>
+        <p class="hero-sub">Sou a Tamyris e crio a presença digital do seu negócio com estratégia, posicionamento e conteúdo que atrai, envolve e converte.</p>
+        <p class="hero-assinatura">Transformo presença digital em resultado.</p>
+        <div class="hero-acoes">
+          <a href="https://wa.me/5519989585145" target="_blank" rel="noopener" class="btn btn-violeta">💬 Impulsionar minha marca</a>
+          <a href="https://instagram.com/tamyrismarketingdigital" target="_blank" rel="noopener" class="btn btn-branco">Ver serviços</a>
+        </div>
+      </div>
+
+      <div class="palco" aria-hidden="true">
+        <div class="celular">
+          <div class="celular-topo"></div>
+          <div class="perfil">
+            <div class="perfil-foto">T</div>
+            <div class="perfil-nome">tamyrismarketingdigital<span>Estratégia • Posicionamento • Crescimento</span></div>
+          </div>
+          <div class="grade">
+            <div class="tile t1">🚀</div>
+            <div class="tile t2">Sua marca<br>em foco</div>
+            <div class="tile t3">Conteúdo<br>magnético</div>
+            <div class="tile t4">Estratégia</div>
+            <div class="tile t5">✦</div>
+            <div class="tile t6">Marca<br>lembrada</div>
+            <div class="tile t7">📈</div>
+            <div class="tile t8">Mais<br>clientes</div>
+            <div class="tile t9">💜</div>
+          </div>
+        </div>
+        <span class="adesivo a1">Estratégia ✨</span>
+        <span class="adesivo a2">Conteúdo que converte</span>
+        <span class="adesivo a3">Crescimento real 📈</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="faixa" aria-hidden="true">
+    <div class="faixa-trilho">
+      <span>Estratégia</span><span>Posicionamento</span><span>Crescimento</span><span>Redes sociais</span><span>Conteúdo</span><span>Portfólio</span>
+      <span>Estratégia</span><span>Posicionamento</span><span>Crescimento</span><span>Redes sociais</span><span>Conteúdo</span><span>Portfólio</span>
+    </div>
+  </div>
+
+  <section class="secao sobre" id="sobre">
+    <div class="sobre-texto">
+      <h2 class="secao-titulo">Sobre a Tamyris Marketing Digital</h2>
+      <p>Sou a Tamyris, e a Tamyris Marketing Digital existe para criar a verdadeira presença digital do seu negócio: com estratégia sólida, posicionamento certo e crescimento real.</p>
+      <p>Crio conteúdo magnético, que atrai, envolve e converte visitantes em clientes.</p>
+    </div>
+    <div class="sobre-cartao">
+      <p>É hora de comunicar para o mundo o quão bom você é naquilo que faz! 🚀</p>
+      <small>Vamos começar pela sua marca?</small>
+    </div>
+  </section>
+
+  <div class="servicos-fundo" id="servicos">
+    <section class="secao">
+      <h2 class="secao-titulo">O que eu faço pela sua marca</h2>
+      <p class="secao-intro">Do planejamento à execução, tudo pensado para o seu negócio ser visto, lembrado e escolhido.</p>
+
+      <div class="bento">
+        <article class="bloco b1">
+          <span class="icone" aria-hidden="true">📘</span>
+          <h3>Estratégia digital</h3>
+          <p>Planejamento completo: definimos caminhos, metas e a melhor forma de chegar até seu público-alvo com clareza e eficiência.</p>
+        </article>
+        <article class="bloco b2">
+          <span class="icone" aria-hidden="true">🎯</span>
+          <h3>Posicionamento de marca</h3>
+          <p>Sua empresa reconhecida e lembrada, com identidade forte, mensagem certa e se destacando da concorrência.</p>
+        </article>
+        <article class="bloco b3">
+          <span class="icone" aria-hidden="true">📈</span>
+          <h3>Crescimento e resultados</h3>
+          <p>Mais visibilidade, engajamento e, o principal, crescimento real e mensurável para o seu negócio.</p>
+        </article>
+        <article class="bloco b4">
+          <span class="icone" aria-hidden="true">📱</span>
+          <h3>Redes sociais e conteúdo</h3>
+          <p>Conteúdo magnético que atrai, conecta e converte, com gerenciamento completo e tudo pronto pra você usar.</p>
+        </article>
+        <article class="bloco b5">
+          <span class="icone" aria-hidden="true">🌐</span>
+          <h3>Projetos e portfólio</h3>
+          <p>Criamos projetos completos e apresentamos todo o trabalho em um portfólio organizado.</p>
+        </article>
+        <article class="bloco b6">
+          <div class="b6-texto">
+            <span class="icone" aria-hidden="true">💬</span>
+            <div>
+              <h3>Atendimento próximo</h3>
+              <p>Tire todas as suas dúvidas e fale comigo diretamente. Atendimento sempre disponível pra você.</p>
+            </div>
+          </div>
+          <a href="https://wa.me/5519989585145" target="_blank" rel="noopener" class="btn btn-sol">Tirar minhas dúvidas</a>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <section class="secao" id="como">
+    <h2 class="secao-titulo">Como funciona</h2>
+    <p class="secao-intro">Um caminho simples, do primeiro contato até a sua marca aparecendo do jeito certo.</p>
+    <div class="passos">
+      <div class="passo">
+        <h3>Conversa</h3>
+        <p>Você me chama no WhatsApp e conta sobre o seu negócio e seus objetivos.</p>
+      </div>
+      <div class="passo">
+        <h3>Estratégia</h3>
+        <p>Definimos metas, público e o posicionamento que faz sentido para a sua marca.</p>
+      </div>
+      <div class="passo">
+        <h3>Conteúdo</h3>
+        <p>Crio o conteúdo e organizo tudo pronto pra você publicar e usar.</p>
+      </div>
+      <div class="passo">
+        <h3>Resultado</h3>
+        <p>Sua marca mais visível, mais lembrada e atraindo mais clientes.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="contato-fundo" id="contato">
+    <section class="contato">
+      <h2>Vamos transformar sua presença digital em resultados?</h2>
+      <p class="lead">Me chama agora e conta o que o seu negócio precisa. A conversa é sem compromisso.</p>
+      <div class="contato-acoes">
+        <a href="https://wa.me/5519989585145" target="_blank" rel="noopener" class="btn btn-sol">💬 Chamar no WhatsApp</a>
+        <a href="https://instagram.com/tamyrismarketingdigital" target="_blank" rel="noopener" class="btn btn-branco">📸 Ver o Instagram</a>
+      </div>
+      <p class="contato-dados">
+        WhatsApp: <a href="https://wa.me/5519989585145" target="_blank" rel="noopener">+55 19 98958-5145</a><br>
+        Instagram: <a href="https://instagram.com/tamyrismarketingdigital" target="_blank" rel="noopener">@tamyrismarketingdigital</a>
+      </p>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2026 Tamyris Marketing Digital</p>
+    <p>Estratégia • Posicionamento • Crescimento</p>
+  </footer>
+
+  <a href="https://wa.me/5519989585145" target="_blank" rel="noopener" class="btn btn-sol btn-pequeno flutuante" aria-label="Chamar a Tamyris no WhatsApp">💬 Falar agora</a>
+
+</body>
+</html>
